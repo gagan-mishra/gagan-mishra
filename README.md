@@ -1,6 +1,6 @@
 # 👋 Hello, World! I'm Gagan Mishra!
 
-![Profile Views](https://raw.githubusercontent.com/your-username/your-repo-name/branch-name/profile-views.txt)
+![Profile Views](https://raw.githubusercontent.com/gagan-mishra/gagan-mishra/main/profile-views.txt)
 
 Welcome to my GitHub profile! I’m a passionate **MERN Stack Developer** and a **Lifelong Learner** in tech. I love solving real-world problems and building impactful solutions with a focus on clean code and scalability.
 
