@@ -1,0 +1,31 @@
+name: Update Profile Views
+
+on:
+  push:
+    branches:
+      - main
+  page_build:
+    types: [completed]
+
+jobs:
+  update-views:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Increment Profile Views
+        id: increment
+        run: |
+          if [ ! -f profile-views.txt ]; then echo "0" > profile-views.txt; fi
+          count=$(cat profile-views.txt)
+          echo $((count + 1)) > profile-views.txt
+          echo "Profile views: $((count + 1))"
+
+      - name: Commit and Push Updated Profile Views
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add profile-views.txt
+          git commit -m "Update profile views count"
+          git push
